@@ -13,7 +13,6 @@ RSpec.describe "Articles", type: :request do
      }
     end
     describe "GET /index" do
-  
       it "renders a successful response" do
         article = Article.new(valid_attributes)
         article.save
@@ -92,8 +91,6 @@ RSpec.describe "Articles", type: :request do
         expect(response).to redirect_to(articles_url)
       end
     end
-
-    
   end
 end
 

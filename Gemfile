@@ -26,11 +26,11 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-
+gem 'json', '>= 2.0.0'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 gem 'devise'
-
+gem 'rails-controller-testing'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -68,6 +68,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'simplecov', require: false
   gem 'factory_bot_rails'
   gem "capybara"
   gem "selenium-webdriver"

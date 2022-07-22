@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>first name</th>
+      <th>last name</th>
+      <th>email</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email %></td>
+         <td><%= link_to "Show this user", user, class:"btn btn-primary"%></td>
+
+      <td><%= button_to 'Delete', user, class: 'btn btn-xs btn-danger', method: :delete %></td>      
+    </tr>
+      <%end%>
+  </tbody>
+</table>

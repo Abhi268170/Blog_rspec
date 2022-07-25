@@ -49,9 +49,7 @@ class ArticlesController < ApplicationController
         end
         redirect_to articles_url
     end
-  
-  
-  
+    
   private
   
       def article_params

@@ -1,0 +1,7 @@
+<div >
+<p><%= comment.body %></p>
+<p><%= time_ago_in_words(comment.created_at) %></p>
+<%if current_user%>
+ <p><%= button_to 'Delete', [comment.article, comment], class: 'btn btn-xs btn-danger', method: :delete %></p>
+<%end%>
+</div>

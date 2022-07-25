@@ -4,4 +4,8 @@ class Article < ApplicationRecord
   validates_length_of :body, minimum: 3, maximum: 200
   validates :body, presence: true
   has_many :comments, dependent: :destroy
+
+  def is_admin?
+    is_admin
+  end
 end
